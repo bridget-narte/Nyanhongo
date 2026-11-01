@@ -1,0 +1,55 @@
+/* Grammar library, lessons and quiz screens. Uses the variables from style.css. */
+.g-input{font:inherit;padding:11px 16px;border:1px solid var(--border);border-radius:99px;background:#fff;width:100%;max-width:420px;margin:14px 0 10px;display:block}
+.row .g-input{margin:0;flex:1;min-width:200px}
+.chip-btn{border:1px solid var(--border);background:#fff;border-radius:99px;padding:7px 16px;font-weight:700;color:var(--text-primary);transition:background .2s}
+.chip-btn:hover{background:var(--surface-soft)}
+.chip-btn.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.g-cat{margin:26px 0 12px}
+.g-card{background:var(--surface-soft);border:1px solid var(--border)}
+.g-card h3{font-size:1.3rem;color:var(--primary-dark)}
+.g-card p{color:var(--text-secondary)}
+
+.g-lesson{margin-top:14px;max-width:760px}
+.g-lesson h3{margin:20px 0 6px;font-size:1rem;color:var(--primary-dark)}
+.g-lesson p{margin:0;line-height:1.6}
+.g-pattern{font-size:2rem;margin:10px 0 2px}
+.g-meaning{color:var(--text-secondary);font-weight:700}
+.g-example{background:#fff;border-left:6px solid var(--secondary);border-radius:var(--radius-small);padding:14px 18px;margin-top:20px;display:grid;gap:4px}
+.g-jp{font-size:1.25rem;font-weight:700}
+
+.g-quiz{max-width:760px}
+.g-quiz .mini-bar{margin:10px 0 20px;height:10px}
+.g-q{font-size:1.35rem;line-height:1.5;margin-bottom:18px}
+.opts{display:grid;gap:10px;margin-bottom:16px}
+.opt{display:flex;align-items:center;gap:14px;text-align:left;background:#fff;border:2px solid var(--border);border-radius:var(--radius-medium);padding:12px 16px;font-size:1.05rem;color:var(--text-primary);transition:border-color .2s,transform .15s}
+.opt b{width:30px;height:30px;border-radius:50%;background:var(--surface-soft);display:grid;place-items:center;flex:none}
+.opt:hover:not(:disabled){border-color:var(--primary);transform:translateX(3px)}
+.opt.right{border-color:var(--success);background:#EEF9F1}
+.opt.wrong{border-color:var(--error);background:#FEF0F1}
+.opt:disabled{cursor:default}
+.line,.tiles{display:flex;flex-wrap:wrap;gap:8px;min-height:54px;padding:10px;border-radius:var(--radius-medium);margin-bottom:12px}
+.line{background:#fff;border:2px dashed var(--border);align-items:center}
+.tile{border:2px solid var(--border);background:#fff;border-radius:var(--radius-small);padding:8px 14px;font-size:1.05rem;color:var(--text-primary)}
+.tile:hover:not(:disabled){border-color:var(--primary)}
+.tile.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.fb{border-radius:var(--radius-medium);padding:14px 18px;margin:16px 0;line-height:1.55}
+.fb p{margin:6px 0 0}
+.fb.ok{background:#EEF9F1;border:1px solid var(--success)}
+.fb.no{background:#FEF0F1;border:1px solid var(--error);margin-top:10px}
+
+.g-result{max-width:760px}
+.g-score{font-size:3.2rem;font-weight:800;color:var(--primary);margin:6px 0 10px}
+@media (max-width:860px){.g-q{font-size:1.15rem}.g-pattern{font-size:1.7rem}}
+
+/* Particle tab */
+.blank{display:inline-block;min-width:2.2em;border-bottom:4px solid var(--secondary);color:var(--secondary);text-align:center}
+.p-en{margin:-8px 0 16px}
+.p-big{font-size:1.4rem;font-weight:700}
+.p-row{display:grid;grid-template-columns:56px 1fr 52px;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)}
+.p-row:last-child{border:0}
+.p-name{font-size:1.5rem;font-weight:700;color:var(--primary-dark);text-align:center}
+.p-row .note{font-size:.8rem;margin-bottom:4px}
+.p-other{font-size:.9rem;margin:3px 0;color:var(--text-secondary)}
+.p-other .jp{font-weight:700;color:var(--text-primary);margin-right:4px}
+.btn.card-btn:disabled,.card .btn:disabled{opacity:.5}
