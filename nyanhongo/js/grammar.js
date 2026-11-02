@@ -51,8 +51,9 @@
         return `<button class="opt ${cls}" data-g="pick" data-i="${i}" ${a ? 'disabled' : ''}><b>${'ABCD'[i]}</b><span class="jp">${E(o)}</span></button>`;
       }).join('') + '</div>';
     } else if (q.kind === 'text') {
-      body = `<div class="row"><input id="gText" class="g-input jp" autocomplete="off" aria-label="Your answer" placeholder="Type in Japanese" ${a ? `disabled value="${E(a.response)}"` : ''}>
-        ${a ? '' : '<button class="btn primary" data-g="check">Check</button>'}</div>`;
+      body = `<div class="row"><input id="gText" class="g-input jp"${NekoKana.attr()} autocomplete="off" aria-label="Your answer" placeholder="Type in Japanese" ${a ? `disabled value="${E(a.response)}"` : ''}>
+        ${a ? '' : '<button class="btn primary" data-g="check">Check</button>'}</div>
+        <div class="row" style="margin-top:10px">${NekoKana.toggle(!!a)}</div>${NekoKana.panel('gText', !!a)}`;
     } else {
       const pool = q.tiles.map((t, i) => z.picked.includes(i) ? '' : `<button class="tile jp" data-g="tile" data-i="${i}" ${a ? 'disabled' : ''}>${E(t)}</button>`).join('');
       const line = z.picked.map(i => `<button class="tile jp on" data-g="untile" data-i="${i}" ${a ? 'disabled' : ''}>${E(q.tiles[i])}</button>`).join('');

@@ -15,7 +15,7 @@
       questions: [
         mc('Choose the correct sentence', 'Which sentence means "I think he is a teacher"?', ['先生だと思います。', '先生ですと思います。', '先生だが思います。', '先生をと思います。'], '先生だと思います。', 'Use the plain form (だ after a noun) before と. ですと is not used before 思います.'),
         tx('Fill in the blank', '明日は晴れる___思います。 (I think it will be sunny tomorrow.)', ['と'], 'と marks what you think, and 晴れる stays in plain form before it.'),
-        tx('Translation', 'Translate: I think this book is interesting.', ['この本はおもしろいと思います', 'この本は面白いと思います', 'この本がおもしろいと思います', 'この本が面白いと思います', 'このほんはおもしろいとおもいます'], 'Plain form おもしろい + と思います. は or が both work after この本.', 'medium')
+        tx('Translation', 'Translate: I think this book is interesting.', ['この本はおもしろいと思います', 'この本は面白いと思います', 'この本がおもしろいと思います', 'この本が面白いと思います', 'このほんはおもしろいとおもいます', 'このほんがおもしろいとおもいます'], 'Plain form おもしろい + と思います. は or が both work after この本.', 'medium')
       ] },
     { id: 'tsumori', pattern: '～つもりです', category: 'Opinions & Intentions', meaning: 'I intend to… / I plan to…',
       formation: 'Dictionary form + つもりです. Negative: ない-form + つもりです (行かないつもりです).',
@@ -59,7 +59,7 @@
       questions: [
         mc('Sentence completion', '来週のテストのために、単語を勉強___。 (I will study the words in advance for next week\'s test.)', ['ておきます', 'てしまいます', 'てみます', 'てくれます'], 'ておきます', 'Preparing ahead for something is ておく.'),
         od('Arrange the pieces: I will buy drinks before the party.', ['パーティーの前に', '飲み物を', '買って', 'おきます'], '買って (て-form) + おきます. The time phrase and 飲み物を can swap places.', 'medium', [['飲み物を', 'パーティーの前に', '買って', 'おきます']]),
-        tx('Translation', 'Translate: I will book the hotel in advance. (予約する = to book)', ['ホテルを予約しておきます', 'ホテルを前もって予約しておきます', 'ホテルを先に予約しておきます'], 'て-form 予約して + おきます expresses doing it ahead of time.', 'medium')
+        tx('Translation', 'Translate: I will book the hotel in advance. (予約する = to book)', ['ホテルを予約しておきます', 'ホテルを前もって予約しておきます', 'ホテルを先に予約しておきます', 'ホテルをよやくしておきます', 'ほてるをよやくしておきます', 'ホテルをまえもってよやくしておきます'], 'て-form 予約して + おきます expresses doing it ahead of time.', 'medium')
       ] },
     { id: 'miru', pattern: '～てみる', category: 'て-form Patterns', meaning: 'to try doing something (to see how it is)',
       formation: 'て-form + みる. 食べる → 食べてみる. Written in hiragana.',
@@ -92,7 +92,7 @@
       questions: [
         mc('Multiple choice', 'Which sentence means "Even though it is spring, it is cold"?', ['春なのに、寒いです。', '春なので、寒いです。', '春だのに、寒いです。', '春のに、寒いです。'], '春なのに、寒いです。', 'のに shows a contrast. 春なので means "because it is spring". After a noun use なのに.'),
         mc('Sentence completion', '薬を飲んだ___、熱が下がりません。 (Even though I took medicine, my fever has not gone down.)', ['のに', 'ので', 'から', 'ために'], 'のに', 'The result is not what you expected, so のに fits.', 'medium'),
-        tx('Translation', 'Translate: I invited him, but he did not come. (誘う = to invite)', ['彼を誘ったのに来ませんでした', '誘ったのに来ませんでした', '彼を誘ったのに彼は来ませんでした'], 'Plain past 誘った + のに, then the unexpected result.', 'hard')
+        tx('Translation', 'Translate: I invited him, but he did not come. (誘う = to invite)', ['彼を誘ったのに来ませんでした', '誘ったのに来ませんでした', '彼を誘ったのに彼は来ませんでした', 'かれをさそったのにきませんでした', 'さそったのにきませんでした', 'かれをさそったのにかれはきませんでした'], 'Plain past 誘った + のに, then the unexpected result.', 'hard')
       ] },
     { id: 'morau', pattern: '～てもらう', category: 'Giving & Receiving', meaning: 'to have someone do something for me',
       formation: 'て-form + もらう. The person who does the action is marked with に.',
@@ -114,7 +114,7 @@
       questions: [
         mc('Sentence completion', '毎日薬を飲___ならません。 (I have to take medicine every day.)', ['まなければ', 'みなければ', 'まないければ', 'んでなければ'], 'まなければ', '飲む → 飲まない → 飲まなければならない.'),
         od('Arrange the pieces: I have to take my passport.', ['パスポートを', '持って', '行かなければ', 'なりません'], '持って行く (take along) + なければなりません.', 'medium'),
-        tx('Translation', 'Translate: I have to study tonight.', ['今晩勉強しなければなりません', '今夜勉強しなければなりません', '今晩は勉強しなければなりません', '今夜は勉強しなければなりません', '今晩勉強しなくてはなりません', '今夜勉強しなくてはなりません'], 'する → しない → しなければなりません.', 'medium')
+        tx('Translation', 'Translate: I have to study tonight.', ['今晩勉強しなければなりません', '今夜勉強しなければなりません', '今晩は勉強しなければなりません', '今夜は勉強しなければなりません', '今晩勉強しなくてはなりません', '今夜勉強しなくてはなりません', 'こんばんべんきょうしなければなりません', 'こんやべんきょうしなければなりません', 'こんばんはべんきょうしなければなりません', 'こんやはべんきょうしなければなりません'], 'する → しない → しなければなりません.', 'medium')
       ] }
   ];
 

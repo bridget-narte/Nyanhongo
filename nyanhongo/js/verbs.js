@@ -73,10 +73,10 @@
       <div class="mini-bar" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><i id="vTimeBar" style="width:${pct}%"></i></div>
       <div class="v-card"><div class="note">${q.shownLabel}</div><div class="v-verb jp">${E(q.shown.kanji)}</div><div class="jp note">${E(q.shown.kana)}</div><div>${E(q.verb.en)}</div></div>
       <p class="v-target">Target: <b class="jp">${E(f.label)}</b> <span class="tag">${f.kind}</span></p>
-      <div class="row"><input id="vAns" class="g-input jp" lang="ja" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Your answer" placeholder="Type the answer in Japanese" value="${E(a ? a.response : z.draft)}" ${a ? 'disabled' : ''}>
+      <div class="row"><input id="vAns" class="g-input jp" lang="ja"${NekoKana.attr()} autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Your answer" placeholder="Type the answer in Japanese" value="${E(a ? a.response : z.draft)}" ${a ? 'disabled' : ''}>
         <button class="btn primary" data-v="check" ${a ? 'disabled' : ''}>Check answer</button></div>
-      <div class="row" style="margin-top:10px"><button class="btn ghost" data-v="hint" ${a ? 'disabled' : ''}>Hint</button><button class="btn ghost" data-v="exp" ${a ? '' : 'disabled'}>Explanation</button>
-        <button class="btn primary" data-v="next" ${a ? '' : 'disabled'}>${s.index + 1 < n ? 'Next verb' : 'See results'}</button><button class="btn ghost" data-v="back">Quit</button></div>
+      <div class="row" style="margin-top:10px"><button class="btn ghost" data-v="hint" ${a ? 'disabled' : ''}>Hint</button>${NekoKana.toggle(!!a)}<button class="btn ghost" data-v="exp" ${a ? '' : 'disabled'}>Explanation</button>
+        <button class="btn primary" data-v="next" ${a ? '' : 'disabled'}>${s.index + 1 < n ? 'Next verb' : 'See results'}</button><button class="btn ghost" data-v="back">Quit</button></div>${NekoKana.panel('vAns', !!a)}
       ${z.hint && !a ? `<div class="v-hint"><b>Hint:</b> ${E(C.rule(q.verb, q.form))}</div>` : ''}${fb}</div>`;
   }
   function resultHTML() {
