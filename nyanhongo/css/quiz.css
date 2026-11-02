@@ -53,3 +53,14 @@
 .p-other{font-size:.9rem;margin:3px 0;color:var(--text-secondary)}
 .p-other .jp{font-weight:700;color:var(--text-primary);margin-right:4px}
 .btn.card-btn:disabled,.card .btn:disabled{opacity:.5}
+
+/* Verb Lab */
+.v-h{font-size:1rem;margin:0 0 10px;color:var(--primary-dark)}
+.v-card{background:var(--surface);border:2px solid var(--border);border-left:8px solid var(--accent-blue);border-radius:var(--radius-medium);padding:16px 22px;margin:6px 0 14px;display:grid;gap:2px}
+.v-verb{font-size:2.6rem;font-weight:700;line-height:1.2}
+.v-target{font-size:1.1rem;margin:0 0 12px}
+.v-hint{background:#FFF8DC;border:1px solid var(--accent-yellow);border-radius:var(--radius-medium);padding:12px 16px;margin-top:14px;line-height:1.5}
+.tbl-wrap{overflow-x:auto;margin-top:12px}
+.v-table{border-collapse:collapse;width:100%;min-width:420px;background:#fff;border-radius:var(--radius-small);overflow:hidden}
+.v-table th,.v-table td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--border)}
+.v-table th{background:var(--primary);color:#fff}
