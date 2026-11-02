@@ -95,6 +95,14 @@
     else { const m = p.mistakes[q.id] || (p.mistakes[q.id] = { count: 0, last: null }); m.count++; m.last = dateKey(); }
   }
 
+  // Per-form accuracy + missed-question list for the Verb Lab. qid looks like '書く|te'.
+  function recordVerb(data, qid, form, correct) {
+    const v = data.verbs, s = v.stats[form] || (v.stats[form] = { seen: 0, correct: 0 });
+    s.seen++;
+    if (correct) { s.correct++; delete v.mistakes[qid]; }
+    else { const m = v.mistakes[qid] || (v.mistakes[qid] = { count: 0, last: null }); m.count++; m.last = dateKey(); }
+  }
+
   // ---- Stats for charts ----
   function weekData(data) {
     const out = [], today = dateKey();
@@ -113,5 +121,5 @@
   const accuracy = m => (m && m.answered ? Math.round((m.correct / m.answered) * 100) : 0);
 
   window.NekoGame = { CONFIG, dateKey, shiftKey, levelInfo, threshold, updateStreak, currentStreak,
-    dayRecord, recordAnswer, recordSession, recordParticle, awardOnce, weekData, accuracy };
+    dayRecord, recordAnswer, recordSession, recordParticle, recordVerb, awardOnce, weekData, accuracy };
 })();
