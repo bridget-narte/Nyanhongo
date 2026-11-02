@@ -177,7 +177,7 @@
     $('#brandName').textContent = APP_NAME;
     document.title = APP_NAME;
     renderNav(); renderTopbar();
-    $('#view').innerHTML = view === 'home' ? viewHome() : view === 'progress' ? viewProgress() : view === 'settings' ? viewSettings() : view === 'grammar' && window.NekoGrammar ? NekoGrammar.view() : view === 'particles' && window.NekoParticles ? NekoParticles.view() : viewModule(view);
+    $('#view').innerHTML = view === 'home' ? viewHome() : view === 'progress' ? viewProgress() : view === 'settings' ? viewSettings() : view === 'grammar' && window.NekoGrammar ? NekoGrammar.view() : view === 'particles' && window.NekoParticles ? NekoParticles.view() : view === 'verbs' && window.NekoVerbs ? NekoVerbs.view() : viewModule(view);
   }
   function go(id) {
     view = id;
