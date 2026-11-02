@@ -17,6 +17,7 @@
       kanji: {},            // filled in Phase 2
       vocab: {},            // filled in Phase 2
       particles: { stats: {}, mistakes: {} }, // stats[p]={seen,correct}; mistakes[questionId]={count,last}
+      verbs: { stats: {}, mistakes: {} },     // stats[formId]={seen,correct}; mistakes['verb|form']={count,last}
       lastModule: null
     };
   }
@@ -28,6 +29,7 @@
     out.profile = Object.assign(base.profile, d.profile || {});
     out.streak = Object.assign(base.streak, d.streak || {});
     out.particles = { stats: (d.particles && d.particles.stats) || {}, mistakes: (d.particles && d.particles.mistakes) || {} };
+    out.verbs = { stats: (d.verbs && d.verbs.stats) || {}, mistakes: (d.verbs && d.verbs.mistakes) || {} };
     out.version = VERSION;
     return out;
   }
