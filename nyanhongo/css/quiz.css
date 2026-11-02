@@ -64,3 +64,15 @@
 .v-table{border-collapse:collapse;width:100%;min-width:420px;background:#fff;border-radius:var(--radius-small);overflow:hidden}
 .v-table th,.v-table td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--border)}
 .v-table th{background:var(--primary);color:#fff}
+
+/* On-screen Japanese keyboard */
+.kb{background:var(--surface-soft);border:1px solid var(--border);border-radius:var(--radius-medium);padding:12px;margin-top:14px;max-width:560px}
+.kb[hidden]{display:none}
+.kb-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.kb button{font-family:'Noto Sans JP','Nunito',sans-serif;font-size:1.1rem;min-height:42px;min-width:0;border:1px solid var(--border);background:#fff;border-radius:10px;color:var(--text-primary);cursor:pointer;transition:background .15s,transform .1s}
+.kb button:hover{background:var(--surface-soft);border-color:var(--primary)}
+.kb button:active{background:var(--primary);color:#fff;transform:scale(.95)}
+.kb-extra{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.kb-extra button{padding:0 16px}
+.kb-toggle[aria-expanded="true"]{background:var(--primary);color:#fff;border-color:var(--primary)}
+@media (max-width:520px){.kb{padding:8px}.kb-grid{gap:4px}.kb button{font-size:1rem;min-height:40px}}
